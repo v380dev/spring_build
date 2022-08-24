@@ -2,6 +2,9 @@ package org.example;
 
 import lombok.SneakyThrows;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * створює об'єкт
  * якщо передано інтерфейс - робить запит у Config
@@ -15,9 +18,11 @@ public class ObjectFactory {
         return ourInstance;
     }
 
-    private Config config = new JavaConfig("org.example");
+    private Config config;
 
     private ObjectFactory() {
+//        this.config = new JavaConfig("org.example", new HashMap<>(Map.of(Policeman.class, AngryPoliceman.class)));
+        this.config = new JavaConfig("org.example", new HashMap<>(Map.of(Policeman.class, PolicemanImpl.class)));
     }
 
     @SneakyThrows
