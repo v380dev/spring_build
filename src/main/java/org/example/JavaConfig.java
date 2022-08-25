@@ -1,11 +1,16 @@
 package org.example;
 
+import lombok.Getter;
 import org.reflections.Reflections;
 
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * шукає які класи імплементують інтерфейс для створення біна
+ */
 public class JavaConfig implements Config {
+    @Getter
     private Reflections scanner;
     private Map<Class, Class> ifc2ImplClass;
 

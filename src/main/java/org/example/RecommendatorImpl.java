@@ -1,7 +1,7 @@
 package org.example;
 
 public class RecommendatorImpl implements Recommendator {
-    @InjectProperty
+    @InjectProperty("wisky")
     private String alcohol;
     @Override
     public void recommend() {
