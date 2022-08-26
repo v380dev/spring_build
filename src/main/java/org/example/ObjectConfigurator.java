@@ -1,5 +1,5 @@
 package org.example;
 
 public interface ObjectConfigurator {
-    void configur (Object t);
+    void configur (Object t, ApplicationContext context);
 }
